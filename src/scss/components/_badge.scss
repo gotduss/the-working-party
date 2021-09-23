@@ -1,0 +1,10 @@
+.badge {
+    padding: 1px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+
+    &.sale {
+        background: $twp-red;
+        color: $white;
+    }
+}

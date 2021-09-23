@@ -1,49 +1,26 @@
 @mixin button() {
     display: inline-flex;
+    width: 100%;
+    min-height: 50px;
     justify-content: center;
     align-items: center;
-    min-height: 50px;
     padding: 0 25px;
-    @include opensans-bold;
+    background: $white;
+    background: linear-gradient(to right, $twp-blue 50%, $white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    font-size: (18rem / 16);
+    @include dmmono-light;
+    color: $twp-blue;
     text-align: center;
+    border: 0;
+    border-radius: 4px;
     text-transform: uppercase;
     text-decoration: none;
-  }
+    transition: all .5s ease-out;
 
-  @keyframes arrow-icon-hover {
-    from { transform: translateX(5px); }
-    to { transform: translateX(0); }
-  }
-  
-  @mixin button-primary() {
-    @include button;
-    background-color: $white;
-    color: $black;
-
-    .arrow {
-      display: inline-flex;
-      align-items: center;
-      margin-right: 13px;
-      font-size: (22rem / 16);
-      font-weight: 700;
-      color: $tri-blue;
-
-      &::before {
-        content: '';
-        position: relative;
-        width: 8px;
-        height: 2px;
-        top: 1px;
-        background-color: $tri-blue;
-      }
-    }
-  
     &:hover {
-      background-color: $white;
-      color: $tri-blue;
-
-      .arrow {
-        animation: arrow-icon-hover .3s ease-in-out;
-      }
+      background-position: left bottom;
+      color: $white;
     }
   }

@@ -3,16 +3,16 @@
     -moz-osx-font-smoothing: grayscale;
 }
   
-@mixin opensans-reg {
-    font-family: 'Open Sans', sans-serif;
+@mixin dmsans-reg {
+    font-family: 'DM Sans', sans-serif;
     font-weight: normal;
     font-style: normal;
     @include font-smoothed;
 }
   
-@mixin opensans-bold {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 700;
+@mixin dmmono-light {
+    font-family: 'DM Mono', monospace;
+    font-weight: 300;
     font-style: normal;
     @include font-smoothed;
 }

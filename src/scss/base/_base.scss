@@ -22,16 +22,10 @@ a, a::before, a::after, input[type="submit"], button {
 
 /* Links */
 a {
-    @include opensans-bold;
     color: $black;
     text-decoration: underline;
   
     &:hover {
-      color: $tri-blue;
       text-decoration: none;
-    }
-  
-    &.button-primary {
-      @include button-primary;
     }
 }

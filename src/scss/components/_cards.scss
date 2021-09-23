@@ -1,78 +1,93 @@
 .component-cards {
-    background: rgb(248,248,249);
-    background: linear-gradient(180deg, rgba(248,248,249,1) 0%, rgba(255,255,255,1) 100%);
-
-    // col-card
-    .col-card {
-        padding-right: 30px;
-        padding-left: 30px;
-
-        &:nth-child(3n+2) {
-            @include media-breakpoint-up(lg) {
-                .card.circle {
-                    flex-direction: column-reverse;
-                    margin-top: 30px;
-
-                    .card-image {
-                        border-radius: 0 50% 50% 50%;
-                    }
-                }
-            }
-        }
-
-        @include media-breakpoint-up(xxl) {
-            padding-right: 50px;
-            padding-left: 50px;
-        }
-    }
-
+    
     // card
-    .card.circle {
-        max-width: 315px;
-        background-color: transparent;
+    .card {
         border: 0;
         border-radius: 0;
 
-        // image
-        .card-image {
+        // card-head
+        &-head {
             position: relative;
-            width: 315px;
-            height: 315px;
-            background-color: $tri-green;
-            border-radius: 50% 50% 50% 0;
-            overflow: hidden;
 
-            img {
+            .top,
+            .bottom {
                 position: absolute;
                 width: 100%;
-                height: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
+                background: transparent;
+                z-index: 9;
+            }
+            .top {
+                display: flex;
+                align-items: center;
+                top: 0;
+                padding-top: 15px;
+
+                .wishlist-button {
+                    margin-left: auto;
+
+                    .far,
+                    .fas {
+                        display: none;
+                        font-size: (18rem / 16);
+
+                        &.active {
+                            display: block;
+                        }
+                    }
+                    .far {
+                        color: $twp-blue;
+                    }
+                    .fas {
+                        color: $twp-red;
+                    }
+                }
+            }
+            .bottom {
+                bottom : 0;
+                padding-bottom: 15px;
+            }
+        } // end card-head
+
+        // card-image
+        &-image {
+            cursor: pointer;
+
+            .img-hover {
+                position: absolute;
                 top: 0;
                 right: 0;
                 bottom: 0;
                 left: 0;
-                object-fit: cover;
-                border-radius: 50%;
+                opacity: 0;
+                transition: all .5s ease-out;
+                z-index: 8;
             }
+            &:hover {
+                .img-hover {
+                    opacity: 1;
+                }
+            }
+        } // end card-image
 
-            @include media-breakpoint-up(lg) {
-                width: 100%;
-                height: 260px;
-            }
-            @include media-breakpoint-up(xl) {
-                height: 320px;
-            }
-            @include media-breakpoint-up(xxl) {
-                height: 380px;
-            }
-        } // end image
+        // card-body
+        &-body {
+            padding-left: 0;
+            padding-right: 0;
 
-        // body
-        .card-body {
-            padding: 1.75rem 0;
-        } // end body
+            .price {
+                .sale {
+                    padding-right: 10px;
+                    color: $twp-red;
 
-        @include media-breakpoint-up(lg) {
-            max-width: 100%;
-        }
+                    & ~ .rrp {
+                        text-decoration: line-through;
+                    }
+                }
+            }
+        } // end card-body
+
     } // end card
+
 }
