@@ -1,0 +1,37 @@
+html {
+    box-sizing: border-box;
+}
+  
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+a, a::before, a::after, input[type="submit"], button {
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+/* Links */
+a {
+    @include opensans-bold;
+    color: $black;
+    text-decoration: underline;
+  
+    &:hover {
+      color: $tri-blue;
+      text-decoration: none;
+    }
+  
+    &.button-primary {
+      @include button-primary;
+    }
+}

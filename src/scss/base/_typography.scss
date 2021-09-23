@@ -1,0 +1,60 @@
+body {
+    font-size: (16rem / 16);
+    @include opensans-reg;
+    color: $black;
+    line-height: 24px;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: 30px;
+  @include opensans-bold;
+  color: $black;
+}
+
+h1,
+.h1 {
+  font-size: (34rem / 16);
+  line-height: 36px;
+
+  @include media-breakpoint-up(md) {
+    font-size: (48rem / 16);
+    line-height: 50px;
+  }
+}
+
+h2,
+.h2 {
+  font-size: (26rem / 16);
+  line-height: 28px;
+
+  @include media-breakpoint-up(md) {
+    font-size: (38rem / 16);
+    line-height: 40px;
+  }
+}
+
+h3,
+.h3 {
+  font-size: (22rem / 16);
+  line-height: 24px;
+
+  @include media-breakpoint-up(md) {
+    font-size: (28rem / 16);
+    line-height: 30px;
+  }
+}
+
+/* Paragraph */
+p {
+    margin-bottom: 20px;
+    font-size: (16rem / 16);
+    @include opensans-reg;
+    color: $black;
+    line-height: 20px;
+  
+    &:last-child {
+      margin-bottom: 0;
+    }
+}

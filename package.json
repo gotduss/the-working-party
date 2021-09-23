@@ -1,0 +1,37 @@
+{
+	"name": "webpage-test",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {
+		"@babel/plugin-proposal-optional-chaining": "^7.12.7",
+		"@fortawesome/fontawesome-free": "^5.15.4",
+		"autoprefixer": "^9.8.6",
+		"bootstrap": "^4.6.0",
+		"browser-sync": "^2.26.14",
+		"cssnano": "^4.1.10",
+		"del": "^3.0.0",
+		"gulp": "^4.0.2",
+		"gulp-concat": "^2.6.1",
+		"gulp-load-plugins": "^1.6.0",
+		"gulp-manifest": "^0.1.1",
+		"gulp-postcss": "^8.0.0",
+		"gulp-purge-sourcemaps": "^1.0.0",
+		"gulp-rename": "^1.4.0",
+		"gulp-sass": "^4.0.2",
+		"gulp-sourcemaps": "^2.6.5",
+		"gulp-uglify": "^3.0.2",
+		"jquery-visible": "^1.2.0",
+		"node-sass": "^4.11.0",
+		"waypoints": "^4.0.1"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.12.9",
+		"@babel/plugin-syntax-optional-chaining": "^7.8.3",
+		"@babel/preset-env": "^7.12.7",
+		"gulp-babel": "^8.0.0"
+	}
+}

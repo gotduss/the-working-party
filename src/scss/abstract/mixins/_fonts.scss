@@ -1,0 +1,22 @@
+@mixin font-smoothed() {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+  
+@mixin opensans-reg {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    @include font-smoothed;
+}
+  
+@mixin opensans-bold {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    @include font-smoothed;
+}
+
+@mixin opensans-italic {
+    font-style: italic;
+}
