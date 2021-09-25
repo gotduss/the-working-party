@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="dist/app.min.css">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="dist/app.min.js"></script>
     <script src="https://kit.fontawesome.com/0541874d67.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -14,12 +17,14 @@
 
     <!-- MAIN -->
     <main class="main">
+
+        <!-- Single card -->
         <section id="section-1" class="component component-cards">
             <div class="container">
                 <div class="row justify-content-md-center">
 
                     <div class="col col-12 col-sm-6 col-md-4 col-card mb-5">
-                        
+
                         <!-- Card -->
                         <div class="card">
 
@@ -28,7 +33,7 @@
                                 <div class="top">
                                   <span class="badge sale">Sale</span>
                                   <span class="wishlist-button">
-                                    <i class="far fa-heart active"></i>
+                                    <i class="far fa-heart"></i>
                                     <i class="fas fa-heart"></i>
                                   </span>
                                 </div>
@@ -41,51 +46,53 @@
                                     <div class="size-wrapper">
                                         <div class="sizes">
                                             <div class="radio-group">
-                                                <input type="radio" id="size_1" name="size" value="size_1">
-                                                <label for="size_1" class="label size_1">7</label>
+                                                <input type="radio" id="size_1_1" name="size" value="size_1">
+                                                <label for="size_1_1" class="label size_1">7</label>
                                             </div>
                                             <div class="radio-group">
-                                                <input type="radio" id="size_2" name="size" value="size_2">
-			                                    <label for="size_2" class="label size_2">7.5</label>
+                                                <input type="radio" id="size_1_2" name="size" value="size_2">
+			                                          <label for="size_1_2" class="label size_2">7.5</label>
                                             </div>
                                             <div class="radio-group">
-                                                <input type="radio" id="size_3" name="size" value="size_3" disabled>
-                                                <label for="size_3" class="label size_3">8</label>
+                                                <input type="radio" id="size_1_3" name="size" value="size_3" class="disabled">
+                                                <label for="size_1_3" class="label size_3 disabled">8</label>
                                             </div>
                                             <div class="radio-group">
-                                                <input type="radio" id="size_4" name="size" value="size_4">
-			                                    <label for="size_4" class="label size_4">9</label>
+                                                <input type="radio" id="size_1_4" name="size" value="size_4">
+			                                          <label for="size_1_4" class="label size_4">9</label>
                                             </div>
                                             <div class="radio-group">
-                                                <input type="radio" id="size_5" name="size" value="size_5">
-                                                <label for="size_5" class="label size_5">10</label>
+                                                <input type="radio" id="size_1_5" name="size" value="size_5">
+                                                <label for="size_1_5" class="label size_5">10</label>
                                             </div>
                                             <div class="radio-group">
-                                                <input type="radio" id="size_6" name="size" value="size_6">
-			                                    <label for="size_6" class="label size_6">10.5</label>
+                                                <input type="radio" id="size_1_6" name="size" value="size_6">
+			                                          <label for="size_1_6" class="label size_6">10.5</label>
                                             </div>
                                             <div class="radio-group">
-                                                <input type="radio" id="size_7" name="size" value="size_7">
-                                                <label for="size_7" class="label size_7">11</label>
+                                                <input type="radio" id="size_1_7" name="size" value="size_7">
+                                                <label for="size_1_7" class="label size_7">11</label>
                                             </div>
                                             <div class="radio-group">
-                                                <input type="radio" id="size_8" name="size" value="size_8">
-			                                    <label for="size_8" class="label size_8">11.5</label>
+                                                <input type="radio" id="size_1_8" name="size" value="size_8">
+			                                          <label for="size_1_8" class="label size_8">11.5</label>
                                             </div>
                                             <div class="radio-group">
-                                                <input type="radio" id="size_9" name="size" value="size_9">
-			                                    <label for="size_9" class="label size_9">12</label>
+                                                <input type="radio" id="size_1_9" name="size" value="size_9">
+			                                          <label for="size_1_9" class="label size_9">12</label>
                                             </div>
                                             <div class="radio-group">
-                                                <input type="radio" id="size_10" name="size" value="size_10">
-                                                <label for="size_10" class="label size_10">12.5</label>
+                                                <input type="radio" id="size_1_10" name="size" value="size_10">
+                                                <label for="size_1_10" class="label size_10">12.5</label>
                                             </div>
                                             <div class="radio-group">
-                                                <input type="radio" id="size_11" name="size" value="size_11" disabled>
-			                                    <label for="size_11" class="label size_11">13</label>
+                                                <input type="radio" id="size_1_11" name="size" value="size_11" class="disabled">
+			                                          <label for="size_1_11" class="label size_11 disabled">13</label>
                                             </div>
                                         </div>
-                                        <button class="button size-button">Select Size</button>
+                                        <button class="button size-select-button">Select Size</button>
+                                        <button class="button add-to-bag-button hide">Add to Bag</button>
+                                        <button class="button out-of-stock-button hide">Out of Stock</button>
                                     </div>
                                 </div>
                             </div>
@@ -109,7 +116,381 @@
 
                 </div>
             </div>
-        </section>
+        </section> <!-- end Single card -->
+
+        <!-- 4 cards in a row - responsive -->
+        <section id="section-2" class="component component-cards">
+          <div class="container">
+            <div class="row justify-content-md-center">
+
+              <div class="col col-12 col-sm-6 col-md-4 col-xl-3 col-card mb-5">
+
+                <!-- Card -->
+                <div class="card">
+
+                  <!-- Card Head - Badge & wishlist + image and quick buy btn -->
+                  <div class="card-head">
+                    <div class="top">
+                      <span class="badge sale">Sale</span>
+                      <span class="wishlist-button">
+                                    <i class="far fa-heart"></i>
+                                    <i class="fas fa-heart"></i>
+                                  </span>
+                    </div>
+                    <div class="card-image">
+                      <img class="img-fluid" src="https://raw.githubusercontent.com/gotduss/the-working-party/master/images/off-white-1.jpg" alt="Sneakers">
+                      <img class="img-fluid img-hover" src="https://raw.githubusercontent.com/gotduss/the-working-party/master/images/off-white-2.jpg" alt="Sneakers">
+                    </div>
+                    <div class="bottom">
+                      <button class="button buy-button">Quick buy</button>
+                      <div class="size-wrapper">
+                        <div class="sizes">
+                          <div class="radio-group">
+                            <input type="radio" id="size_2_1" name="size" value="size_2_1">
+                            <label for="size_2_1" class="label size_1">7</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_2_2" name="size" value="size_2_2">
+                            <label for="size_2_2" class="label size_2">7.5</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_2_3" name="size" value="size_2_3" class="disabled">
+                            <label for="size_2_3" class="label size_3 disabled">8</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_2_4" name="size" value="size_2_4">
+                            <label for="size_2_4" class="label size_4">9</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_2_5" name="size" value="size_2_5">
+                            <label for="size_2_5" class="label size_5">10</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_2_6" name="size" value="size_2_6">
+                            <label for="size_2_6" class="label size_6">10.5</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_2_7" name="size" value="size_2_7">
+                            <label for="size_2_7" class="label size_7">11</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_2_8" name="size" value="size_2_8">
+                            <label for="size_1_8" class="label size_8">11.5</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_2_9" name="size" value="size_2_9">
+                            <label for="size_2_9" class="label size_9">12</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_2_10" name="size" value="size_2_10">
+                            <label for="size_2_10" class="label size_10">12.5</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_2_11" name="size" value="size_2_11" class="disabled">
+                            <label for="size_2_11" class="label size_11 disabled">13</label>
+                          </div>
+                        </div>
+                        <button class="button size-select-button">Select Size</button>
+                        <button class="button add-to-bag-button hide">Add to Bag</button>
+                        <button class="button out-of-stock-button hide">Out of Stock</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Card Head -->
+
+                  <!-- Card Body - Title, short descr & price -->
+                  <div class="card-body">
+                    <h3 class="title">Off-white</h3>
+                    <p class="short-description">Off-Court 3.0 high-top sneakers</p>
+                    <div class="price">
+                      <span class="sale">$1,128</span>
+                      <span class="rrp">$1,528</span>
+                    </div>
+                  </div>
+                  <!-- End Card Body -->
+
+                </div>
+                <!-- End Card -->
+
+              </div>
+
+              <div class="col col-12 col-sm-6 col-md-4 col-xl-3 col-card mb-5">
+
+              <!-- Card -->
+                <div class="card">
+
+                  <!-- Card Head - Badge & wishlist + image and quick buy btn -->
+                  <div class="card-head">
+                    <div class="top">
+                      <span class="badge sale">Sale</span>
+                      <span class="wishlist-button">
+                                    <i class="far fa-heart"></i>
+                                    <i class="fas fa-heart"></i>
+                                  </span>
+                    </div>
+                    <div class="card-image">
+                      <img class="img-fluid" src="https://raw.githubusercontent.com/gotduss/the-working-party/master/images/off-white-1.jpg" alt="Sneakers">
+                      <img class="img-fluid img-hover" src="https://raw.githubusercontent.com/gotduss/the-working-party/master/images/off-white-2.jpg" alt="Sneakers">
+                    </div>
+                    <div class="bottom">
+                      <button class="button buy-button">Quick buy</button>
+                      <div class="size-wrapper">
+                        <div class="sizes">
+                          <div class="radio-group">
+                            <input type="radio" id="size_3_1" name="size" value="size_3_1">
+                            <label for="size_3_1" class="label size_1">7</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_3_2" name="size" value="size_3_2">
+                            <label for="size_3_2" class="label size_2">7.5</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_3_3" name="size" value="size_3_3" class="disabled">
+                            <label for="size_3_3" class="label size_3 disabled">8</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_3_4" name="size" value="size_3_4">
+                            <label for="size_3_4" class="label size_4">9</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_3_5" name="size" value="size_3_5">
+                            <label for="size_3_5" class="label size_5">10</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_3_6" name="size" value="size_3_6">
+                            <label for="size_3_6" class="label size_6">10.5</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_3_7" name="size" value="size_3_7">
+                            <label for="size_3_7" class="label size_7">11</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_3_8" name="size" value="size_3_8">
+                            <label for="size_1_8" class="label size_8">11.5</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_3_9" name="size" value="size_3_9">
+                            <label for="size_3_9" class="label size_9">12</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_3_10" name="size" value="size_3_10">
+                            <label for="size_3_10" class="label size_10">12.5</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_3_11" name="size" value="size_3_11" class="disabled">
+                            <label for="size_3_11" class="label size_11 disabled">13</label>
+                          </div>
+                        </div>
+                        <button class="button size-select-button">Select Size</button>
+                        <button class="button add-to-bag-button hide">Add to Bag</button>
+                        <button class="button out-of-stock-button hide">Out of Stock</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Card Head -->
+
+                  <!-- Card Body - Title, short descr & price -->
+                  <div class="card-body">
+                    <h3 class="title">Off-white</h3>
+                    <p class="short-description">Off-Court 3.0 high-top sneakers</p>
+                    <div class="price">
+                      <span class="sale">$1,128</span>
+                      <span class="rrp">$1,528</span>
+                    </div>
+                  </div>
+                  <!-- End Card Body -->
+
+                </div>
+                <!-- End Card -->
+
+              </div>
+
+              <div class="col col-12 col-sm-6 col-md-4 col-xl-3 col-card mb-5">
+
+              <!-- Card -->
+                <div class="card">
+
+                  <!-- Card Head - Badge & wishlist + image and quick buy btn -->
+                  <div class="card-head">
+                    <div class="top">
+                      <span class="badge sale">Sale</span>
+                      <span class="wishlist-button">
+                                    <i class="far fa-heart"></i>
+                                    <i class="fas fa-heart"></i>
+                                  </span>
+                    </div>
+                    <div class="card-image">
+                      <img class="img-fluid" src="https://raw.githubusercontent.com/gotduss/the-working-party/master/images/off-white-1.jpg" alt="Sneakers">
+                      <img class="img-fluid img-hover" src="https://raw.githubusercontent.com/gotduss/the-working-party/master/images/off-white-2.jpg" alt="Sneakers">
+                    </div>
+                    <div class="bottom">
+                      <button class="button buy-button">Quick buy</button>
+                      <div class="size-wrapper">
+                        <div class="sizes">
+                          <div class="radio-group">
+                            <input type="radio" id="size_4_1" name="size" value="size_4_1">
+                            <label for="size_4_1" class="label size_1">7</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_4_2" name="size" value="size_4_2">
+                            <label for="size_4_2" class="label size_2">7.5</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_4_3" name="size" value="size_4_3" class="disabled">
+                            <label for="size_4_3" class="label size_3 disabled">8</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_4_4" name="size" value="size_4_4">
+                            <label for="size_4_4" class="label size_4">9</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_4_5" name="size" value="size_4_5">
+                            <label for="size_4_5" class="label size_5">10</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_4_6" name="size" value="size_4_6">
+                            <label for="size_4_6" class="label size_6">10.5</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_4_7" name="size" value="size_4_7">
+                            <label for="size_4_7" class="label size_7">11</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_4_8" name="size" value="size_4_8">
+                            <label for="size_1_8" class="label size_8">11.5</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_4_9" name="size" value="size_4_9">
+                            <label for="size_4_9" class="label size_9">12</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_4_10" name="size" value="size_4_10">
+                            <label for="size_4_10" class="label size_10">12.5</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_4_11" name="size" value="size_4_11" class="disabled">
+                            <label for="size_4_11" class="label size_11 disabled">13</label>
+                          </div>
+                        </div>
+                        <button class="button size-select-button">Select Size</button>
+                        <button class="button add-to-bag-button hide">Add to Bag</button>
+                        <button class="button out-of-stock-button hide">Out of Stock</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Card Head -->
+
+                  <!-- Card Body - Title, short descr & price -->
+                  <div class="card-body">
+                    <h3 class="title">Off-white</h3>
+                    <p class="short-description">Off-Court 3.0 high-top sneakers</p>
+                    <div class="price">
+                      <span class="sale">$1,128</span>
+                      <span class="rrp">$1,528</span>
+                    </div>
+                  </div>
+                  <!-- End Card Body -->
+
+                </div>
+                <!-- End Card -->
+
+              </div>
+
+              <div class="col col-12 col-sm-6 col-md-4 col-xl-3 col-card mb-5">
+
+              <!-- Card -->
+                <div class="card">
+
+                  <!-- Card Head - Badge & wishlist + image and quick buy btn -->
+                  <div class="card-head">
+                    <div class="top">
+                      <span class="badge sale">Sale</span>
+                      <span class="wishlist-button">
+                                    <i class="far fa-heart"></i>
+                                    <i class="fas fa-heart"></i>
+                                  </span>
+                    </div>
+                    <div class="card-image">
+                      <img class="img-fluid" src="https://raw.githubusercontent.com/gotduss/the-working-party/master/images/off-white-1.jpg" alt="Sneakers">
+                      <img class="img-fluid img-hover" src="https://raw.githubusercontent.com/gotduss/the-working-party/master/images/off-white-2.jpg" alt="Sneakers">
+                    </div>
+                    <div class="bottom">
+                      <button class="button buy-button">Quick buy</button>
+                      <div class="size-wrapper">
+                        <div class="sizes">
+                          <div class="radio-group">
+                            <input type="radio" id="size_5_1" name="size" value="size_5_1">
+                            <label for="size_5_1" class="label size_1">7</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_5_2" name="size" value="size_5_2">
+                            <label for="size_5_2" class="label size_2">7.5</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_5_3" name="size" value="size_5_3" class="disabled">
+                            <label for="size_5_3" class="label size_3 disabled">8</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_5_4" name="size" value="size_5_4">
+                            <label for="size_5_4" class="label size_4">9</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_5_5" name="size" value="size_5_5">
+                            <label for="size_5_5" class="label size_5">10</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_5_6" name="size" value="size_5_6">
+                            <label for="size_5_6" class="label size_6">10.5</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_5_7" name="size" value="size_5_7">
+                            <label for="size_5_7" class="label size_7">11</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_5_8" name="size" value="size_5_8">
+                            <label for="size_1_8" class="label size_8">11.5</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_5_9" name="size" value="size_5_9">
+                            <label for="size_5_9" class="label size_9">12</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_5_10" name="size" value="size_5_10">
+                            <label for="size_5_10" class="label size_10">12.5</label>
+                          </div>
+                          <div class="radio-group">
+                            <input type="radio" id="size_5_11" name="size" value="size_5_11" class="disabled">
+                            <label for="size_5_11" class="label size_11 disabled">13</label>
+                          </div>
+                        </div>
+                        <button class="button size-select-button">Select Size</button>
+                        <button class="button add-to-bag-button hide">Add to Bag</button>
+                        <button class="button out-of-stock-button hide">Out of Stock</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Card Head -->
+
+                  <!-- Card Body - Title, short descr & price -->
+                  <div class="card-body">
+                    <h3 class="title">Off-white</h3>
+                    <p class="short-description">Off-Court 3.0 high-top sneakers</p>
+                    <div class="price">
+                      <span class="sale">$1,128</span>
+                      <span class="rrp">$1,528</span>
+                    </div>
+                  </div>
+                  <!-- End Card Body -->
+
+                </div>
+                <!-- End Card -->
+
+              </div>
+
+            </div>
+          </div>
+        </section> <!-- end 4 cards in a row - responsive -->
+
     </main>
 
     <!-- FOOTER -->

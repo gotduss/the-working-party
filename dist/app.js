@@ -1,30 +1,28 @@
-$(document).ready(function() {
+"use strict";
 
+$(document).ready(function () {
   var $wishlistBtn = $('.wishlist-button'),
-    $buyBtn = $('.buy-button'),
-    $radioBtn = $('input[name="size"]'),
-    $targetEle;
+      $buyBtn = $('.buy-button'),
+      $radioBtn = $('input[name="size"]'),
+      $targetEle; // Toggle active class on wishlist-button click to change icon state
 
-  // Toggle active class on wishlist-button click to change icon state
-  $wishlistBtn.on("click", function() {
+  $wishlistBtn.on("click", function () {
     $(this).toggleClass('active');
-  });
+  }); // Add class on Quick Buy button click
 
-  // Add class on Quick Buy button click
-  $buyBtn.on("click", function() {
+  $buyBtn.on("click", function () {
     $(this).addClass('hide');
     $(this).siblings('.size-wrapper').addClass('active');
-  });
+  }); // Function that adds/removes class to buttons
 
-  // Function that adds/removes class to buttons
-  function enableDisableBtn (ele, targetBtn) {
+  function enableDisableBtn(ele, targetBtn) {
     $targetEle = ele.closest('.size-wrapper');
     $targetEle.find('.button').addClass('hide');
     $targetEle.find(targetBtn).removeClass('hide');
-  }
+  } // Toggle class on buttons click to show/hide buttons
 
-  // Toggle class on buttons click to show/hide buttons
-  $radioBtn.on("click", function() {
+
+  $radioBtn.on("click", function () {
     var $this = $(this);
 
     if ($this.hasClass("disabled")) {
@@ -36,19 +34,10 @@ $(document).ready(function() {
         enableDisableBtn($this, '.size-select-button');
       }
     }
+  }); // Remove class on Add to Bag button click
 
-  });
-
-  // Remove class on Add to Bag button click
-  $('.add-to-bag-button').on("click", function() {
+  $('.add-to-bag-button').on("click", function () {
     $(this).closest('.size-wrapper').removeClass('active');
     $(this).closest('.size-wrapper').siblings('.buy-button').removeClass('hide');
   });
-
-
-
-
-
-
-
 });
